@@ -1,9 +1,10 @@
 package GestionRectificadoraMalvinas.Model;
-
 import jakarta.persistence.*;
+import lombok.Data;
 
-@Entity
-@Table(name = "tbl_cliente")
+@Entity //Lo transforma en una entidad para la BDD
+@Table(name = "tbl_cliente") //Nombre que tendra en la BDD
+@Data //Evita crear Getters and Setters
 public class Cliente {
 
     @Id
@@ -14,22 +15,22 @@ public class Cliente {
     @Column(unique = true, nullable = false)
     private String dni;
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private String nombre;
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private String apellido;
 
     @Column(unique = true, nullable = false)
     private String numero;
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private String domicilio;
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private String altura;
 
-    @Column(name = "metodo_de_pago", unique = true, nullable = false)
+    @Column(name = "metodo_de_pago", nullable = false)
     private String metodoPago;
-    
+
 }
