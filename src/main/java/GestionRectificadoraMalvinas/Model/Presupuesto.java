@@ -1,7 +1,6 @@
 package GestionRectificadoraMalvinas.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
@@ -12,13 +11,24 @@ import java.util.List;
 @Data //Evita crear Getters and Setters
 public class Presupuesto {
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_presupuesto")
     private Integer id;
+
+    @Temporal(TemporalType.DATE)
+    @Column(nullable = false)
     private Date fecha;
+
+    @Column(nullable = false)
     private Number descuento;
+
+    @Column(name = "items_asociados", nullable = false)
     private List<Item> items;
+
+    @Column(nullable = false)
     private Number total;
-
-
 
 
 }
