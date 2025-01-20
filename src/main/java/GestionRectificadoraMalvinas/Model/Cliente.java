@@ -1,36 +1,94 @@
 package GestionRectificadoraMalvinas.Model;
 import jakarta.persistence.*;
-import lombok.Data;
 
 @Entity //Lo transforma en una entidad para la BDD
 @Table(name = "tbl_cliente") //Nombre que tendra en la BDD
-@Data //Evita crear Getters and Setters
 public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_cliente")
-    private Integer id;
+    private Long id;
 
-    @Column(unique = true, nullable = false)
+    @Column(name = "dni_cliente", unique = true, nullable = false)
     private String dni;
 
-    @Column(nullable = false)
+    @Column(name = "nombre_cliente", nullable = false)
     private String nombre;
 
-    @Column(nullable = false)
+    @Column(name = "apellido_cliente", nullable = false)
     private String apellido;
 
-    @Column(unique = true, nullable = false)
+    @Column(name = "numero_cliente", unique = true, nullable = false)
     private String numero;
 
-    @Column(nullable = false)
+    @Column(name = "domicilio", nullable = false)
     private String domicilio;
 
-    @Column(nullable = false)
+    @Column(name = "altura_domicilio", nullable = false)
     private String altura;
 
     @Column(name = "metodo_de_pago", nullable = false)
     private String metodoPago;
 
+    //Getters and Setters
+    public Long getId() {
+        return id;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getDomicilio() {
+        return domicilio;
+    }
+
+    public void setDomicilio(String domicilio) {
+        this.domicilio = domicilio;
+    }
+
+    public String getAltura() {
+        return altura;
+    }
+
+    public void setAltura(String altura) {
+        this.altura = altura;
+    }
+
+    public String getMetodoPago() {
+        return metodoPago;
+    }
+
+    public void setMetodoPago(String metodoPago) {
+        this.metodoPago = metodoPago;
+    }
 }
