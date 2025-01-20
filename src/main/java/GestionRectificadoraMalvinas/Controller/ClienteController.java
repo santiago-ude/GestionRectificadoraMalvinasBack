@@ -28,7 +28,7 @@ public class ClienteController {
 
     //GET By ID
     @GetMapping("/{id}")
-    public ResponseEntity<?> getClienteById(@PathVariable Integer id){
+    public ResponseEntity<?> getClienteById(@PathVariable Long id){
 
         Optional<Cliente> search = CS.getClienteById(id);
         if(search.isPresent()){
@@ -56,7 +56,7 @@ public class ClienteController {
 
     //PUT
     @PutMapping("/{id}")
-    public ResponseEntity<?> putCliente(@PathVariable Integer id, @RequestBody Cliente newCliente){
+    public ResponseEntity<?> putCliente(@PathVariable Long id, @RequestBody Cliente newCliente){
 
     Cliente aux = CS.putCliente(id,newCliente);
     if(aux != null){
@@ -67,8 +67,8 @@ public class ClienteController {
 
     //PATCH
     @PatchMapping("/{id}")
-    public ResponseEntity<?> patchCliente(@PathVariable Integer id, @RequestBody Cliente newCliente){
-        Cliente aux = CS.putCliente(id,newCliente);
+    public ResponseEntity<?> patchCliente(@PathVariable Long id, @RequestBody Cliente newCliente){
+        Cliente aux = CS.patchCliente(id,newCliente);
         if(aux != null){
             return ResponseEntity.noContent().build();
         }
@@ -77,7 +77,7 @@ public class ClienteController {
 
     //DELETE
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteCliente(@PathVariable Integer id){
+    public ResponseEntity<?> deleteCliente(@PathVariable Long id){
 
         if(CS.deleteCliente(id).isPresent()){
             return ResponseEntity.noContent().build();
