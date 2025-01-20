@@ -88,7 +88,7 @@ public Presupuesto putPresupuesto(Long id, Presupuesto newPresupuesto){
 
 
     //DELETE
-    public Presupuesto deletePresupuesto(Long id){                                                                                                              
+    public Presupuesto deletePresupuesto(Long id){
         Optional<Presupuesto> search = PR.findById(id);
         if(search.isPresent()){
             PR.deleteById(id);
