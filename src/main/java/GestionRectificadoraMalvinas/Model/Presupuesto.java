@@ -1,5 +1,6 @@
 package GestionRectificadoraMalvinas.Model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -22,6 +23,7 @@ public class Presupuesto {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "items_asociados", nullable = false)
+
     private List<Item> items;
 
     @Column(name = "total_presupuesto", nullable = false)
