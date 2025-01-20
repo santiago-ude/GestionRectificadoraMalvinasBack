@@ -22,7 +22,7 @@ public class ClienteService {
     }
 
     //GET By ID
-    public Optional<Cliente> getClienteById(Integer id){
+    public Optional<Cliente> getClienteById(Long id){
         return CR.findById(id);
     }
 
@@ -45,7 +45,7 @@ public class ClienteService {
     }
 
     //PUT
-    public Cliente putCliente(Integer id, Cliente newCliente){
+    public Cliente putCliente(Long id, Cliente newCliente){
 
         if(newCliente.getAltura() != null
                 && newCliente.getDni() != null
@@ -78,7 +78,7 @@ public class ClienteService {
     }
 
     //PATCH
-    public Cliente patchCliente(Integer id, Cliente newCliente){
+    public Cliente patchCliente(Long id, Cliente newCliente){
 
             Optional<Cliente> search = CR.findById(id);
             if (search.isPresent()) {
@@ -102,7 +102,7 @@ public class ClienteService {
     }
 
     //DELETE
-    public Optional<Cliente> deleteCliente(Integer id){
+    public Optional<Cliente> deleteCliente(Long id){
         Optional<Cliente> search = CR.findById(id);
         CR.deleteById(id);
         return search;
