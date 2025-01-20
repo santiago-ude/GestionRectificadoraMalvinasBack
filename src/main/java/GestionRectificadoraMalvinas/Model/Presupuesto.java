@@ -11,6 +11,7 @@ import java.util.List;
 @Entity
 @Table(name = "tbl_presupuesto")
 public class Presupuesto {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_presupuesto")
@@ -24,6 +25,8 @@ public class Presupuesto {
     private Number descuento;
 
 
+    @ElementCollection
+    @CollectionTable(name = "tbl_items", joinColumns = @JoinColumn(name = "id_presupuesto"))
     private List<Item> items;
 
     @Column(name = "total_presupuesto", nullable = false)
