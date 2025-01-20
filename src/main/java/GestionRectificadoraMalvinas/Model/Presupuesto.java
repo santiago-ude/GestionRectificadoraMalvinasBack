@@ -25,7 +25,7 @@ public class Presupuesto {
     @Column(name = "total_presupuesto", nullable = false)
     private Number total;
 
-    
+
     //Getters and Setters
     public Long getId() {
         return id;
