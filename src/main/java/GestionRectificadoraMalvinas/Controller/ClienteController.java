@@ -42,13 +42,14 @@ public class ClienteController {
     public ResponseEntity<?> postCliente(@RequestBody Cliente newCliente){
 
         Cliente aux = CS.postCliente(newCliente);
-
-        URI location = ServletUriComponentsBuilder
-                .fromCurrentRequest()
-                .path("/{id}")
-                .buildAndExpand(newCliente.getId())
-                .toUri();
         if(aux != null){
+
+            URI location = ServletUriComponentsBuilder
+                    .fromCurrentRequest()
+                    .path("/{id}")
+                    .buildAndExpand(newCliente.getId())
+                    .toUri();
+
             return ResponseEntity.created(location).build();
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cliente Incompleto");
@@ -79,7 +80,9 @@ public class ClienteController {
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteCliente(@PathVariable Long id){
 
-        if(CS.deleteCliente(id).isPresent()){
+        Cliente aux = CS.deleteCliente(id);
+
+        if(aux != null){
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cliente no encontrado");
