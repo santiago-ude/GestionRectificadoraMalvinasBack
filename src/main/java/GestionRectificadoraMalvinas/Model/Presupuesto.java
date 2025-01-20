@@ -21,7 +21,6 @@ public class Presupuesto {
     @Column(name = "descuento")
     private Number descuento;
 
-    @JoinColumn(name = "items_asociados", nullable = false)
 
     private List<Item> items;
 
