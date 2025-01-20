@@ -102,10 +102,13 @@ public class ClienteService {
     }
 
     //DELETE
-    public Optional<Cliente> deleteCliente(Long id){
+    public Cliente deleteCliente(Long id){
         Optional<Cliente> search = CR.findById(id);
-        CR.deleteById(id);
-        return search;
+        if(search.isPresent()){
+            CR.deleteById(id);
+            return search.get();
+        }
+        return null;
     }
 
 
