@@ -13,13 +13,15 @@ public class Presupuesto {
     @Column(name = "id_presupuesto")
     private Long id;
 
+    @Temporal(TemporalType.DATE)
     @Column(name = "fecha_presupuesto", nullable = false)
     private Date fecha;
 
     @Column(name = "descuento")
     private Number descuento;
 
-    @Column(name = "items_asociados", nullable = false)
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "items_asociados", nullable = false)
     private List<Item> items;
 
     @Column(name = "total_presupuesto", nullable = false)
