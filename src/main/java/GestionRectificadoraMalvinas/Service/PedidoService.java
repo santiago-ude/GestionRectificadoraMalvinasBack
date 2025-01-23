@@ -1,6 +1,8 @@
 package GestionRectificadoraMalvinas.Service;
 
+import GestionRectificadoraMalvinas.Model.Cliente;
 import GestionRectificadoraMalvinas.Model.Pedido;
+import GestionRectificadoraMalvinas.Repository.ClienteRepository;
 import GestionRectificadoraMalvinas.Repository.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +16,9 @@ public class PedidoService {
 
     @Autowired
     PedidoRepository PR;
+
+    @Autowired
+    ClienteRepository CR;
 
 
     //GET
@@ -38,8 +43,15 @@ public class PedidoService {
             && newPedido.getModeloAuto() != null
             && newPedido.getNumeroSerie() != null
             && newPedido.getDescripcion() != null){
-            PR.save(newPedido);
-            return newPedido;
+
+            // Verificar que el cliente existe
+            Optional<Cliente> clienteExistente = CR.findById(newPedido.getCliente().getId());
+            if(clienteExistente.isPresent()){
+
+                newPedido.setCliente(clienteExistente.get());
+                PR.save(newPedido);
+                return newPedido;
+            }
         }
         return null;
     }
