@@ -30,9 +30,9 @@ public class Pedido {
     @Column(name = "estado_pedido", nullable = false)
     private String estado; //o enum
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_presupuesto", nullable = false)
-    private List<Presupuesto> presupuesto;
+    private Presupuesto presupuesto;
 
     @Column(name = "marca_auto", nullable = false)
     private String marcaAuto;
@@ -93,11 +93,11 @@ public class Pedido {
         this.estado = estado;
     }
 
-    public List<Presupuesto> getPresupuesto() {
+    public Presupuesto getPresupuesto() {
         return presupuesto;
     }
 
-    public void setPresupuesto(List<Presupuesto> presupuesto) {
+    public void setPresupuesto(Presupuesto presupuesto) {
         this.presupuesto = presupuesto;
     }
 
