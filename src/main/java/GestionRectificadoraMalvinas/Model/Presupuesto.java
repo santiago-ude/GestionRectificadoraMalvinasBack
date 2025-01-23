@@ -14,7 +14,7 @@ public class Presupuesto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_presupuesto")
+    @Column(name = "id_presupuesto",nullable = false)
     private Long id;
 
     @Temporal(TemporalType.DATE)
@@ -31,9 +31,10 @@ public class Presupuesto {
     @Column(name = "total_presupuesto", nullable = false)
     private Number total;
 
+
+
+
     //Constructor
-
-
     public Presupuesto() {
     }
 
@@ -72,5 +73,16 @@ public class Presupuesto {
 
     public void setTotal(Number total) {
         this.total = total;
+    }
+
+    @Override
+    public String toString() {
+        return "Presupuesto{" +
+                "id=" + id +
+                "\n, fecha=" + fecha +
+                "\n, descuento=" + descuento +
+                "\n, items=" + items +
+                "\n, total=" + total +
+                '}';
     }
 }
