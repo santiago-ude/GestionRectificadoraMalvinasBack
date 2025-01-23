@@ -33,10 +33,10 @@ public class PresupuestoService {
 
         if(newPresupuesto.getFecha() != null
            && newPresupuesto.getDescuento() != null
-           && newPresupuesto.getItems() != null
+           && (newPresupuesto.getItems() != null || !newPresupuesto.getItems().isEmpty())
            && newPresupuesto.getTotal() != null){
-            PR.save(newPresupuesto);
-            return newPresupuesto;
+
+            return PR.save(newPresupuesto);
         }
     return null;
     }
