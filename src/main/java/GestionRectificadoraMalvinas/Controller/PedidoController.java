@@ -39,7 +39,10 @@ public class PedidoController {
     //POST
     @PostMapping
     public ResponseEntity<?> postPedido(@RequestBody Pedido newPedido){
+
         Pedido aux = PS.postPedido(newPedido);
+
+
         if(aux != null){
 
             URI location = ServletUriComponentsBuilder
