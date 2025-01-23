@@ -3,6 +3,7 @@ package GestionRectificadoraMalvinas.Model;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "tbl_pedido")
@@ -29,9 +30,9 @@ public class Pedido {
     @Column(name = "estado_pedido", nullable = false)
     private String estado; //o enum
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_presupuesto", nullable = false)
-    private Presupuesto presupuesto;
+    private List<Presupuesto> presupuesto;
 
     @Column(name = "marca_auto", nullable = false)
     private String marcaAuto;
@@ -92,11 +93,11 @@ public class Pedido {
         this.estado = estado;
     }
 
-    public Presupuesto getPresupuesto() {
+    public List<Presupuesto> getPresupuesto() {
         return presupuesto;
     }
 
-    public void setPresupuesto(Presupuesto presupuesto) {
+    public void setPresupuesto(List<Presupuesto> presupuesto) {
         this.presupuesto = presupuesto;
     }
 
