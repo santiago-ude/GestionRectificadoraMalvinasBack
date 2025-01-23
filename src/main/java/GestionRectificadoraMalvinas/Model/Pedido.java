@@ -31,7 +31,7 @@ public class Pedido {
     private String estado; //o enum
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_presupuesto", nullable = false)
+    @JoinColumn(name = "id_presupuesto", referencedColumnName = "id_presupuesto")
     private Presupuesto presupuesto;
 
     @Column(name = "marca_auto", nullable = false)
@@ -46,9 +46,11 @@ public class Pedido {
     @Column(name = "descripcion", nullable = false)
     private String descripcion;
 
+    //Constructor
+    public Pedido() {
+    }
+
     //Getters and Setters
-
-
     public long getId() {
         return id;
     }
