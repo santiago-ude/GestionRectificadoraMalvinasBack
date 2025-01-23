@@ -2,6 +2,7 @@ package GestionRectificadoraMalvinas.Service;
 
 import GestionRectificadoraMalvinas.Model.Cliente;
 import GestionRectificadoraMalvinas.Model.Pedido;
+import GestionRectificadoraMalvinas.Model.Presupuesto;
 import GestionRectificadoraMalvinas.Repository.ClienteRepository;
 import GestionRectificadoraMalvinas.Repository.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,28 +33,43 @@ public class PedidoService {
     }
 
     //POST
-    public Pedido postPedido(Pedido newPedido){
-        if(newPedido.getCliente() != null
-            && newPedido.getFechaEntrada() != null
-            && newPedido.getFechaSalidaEstimada() != null
-            && newPedido.getFechaEntregaEfectiva() != null
-            && newPedido.getEstado() != null
-            && newPedido.getPresupuesto() != null
-            && newPedido.getMarcaAuto() != null
-            && newPedido.getModeloAuto() != null
-            && newPedido.getNumeroSerie() != null
-            && newPedido.getDescripcion() != null){
+    public Pedido postPedido(Pedido newPedido) {
+        // Validar que todos los campos de Pedido son válidos
+        if (newPedido.getCliente() != null
+                && newPedido.getFechaEntrada() != null
+                && newPedido.getFechaSalidaEstimada() != null
+                && newPedido.getFechaEntregaEfectiva() != null
+                && newPedido.getEstado() != null
+                && newPedido.getPresupuesto() != null
+                && newPedido.getMarcaAuto() != null
+                && newPedido.getModeloAuto() != null
+                && newPedido.getNumeroSerie() != null
+                && newPedido.getDescripcion() != null) {
 
             // Verificar que el cliente existe
             Optional<Cliente> clienteExistente = CR.findById(newPedido.getCliente().getId());
-            if(clienteExistente.isPresent()){
-
+            if (clienteExistente.isPresent()) {
+                // Asociar cliente existente
                 newPedido.setCliente(clienteExistente.get());
-                PR.save(newPedido);
-                return newPedido;
+
+                // Validar y guardar presupuesto si es necesario
+                Presupuesto presupuesto = newPedido.getPresupuesto();
+                if (presupuesto != null) {
+                    // Validar atributos del presupuesto (opcional)
+                    if (presupuesto.getFecha() != null && presupuesto.getTotal() != null) {
+                        newPedido.setPresupuesto(presupuesto);
+                    } else {
+                        throw new IllegalArgumentException("Presupuesto incompleto");
+                    }
+                }
+
+                // Guardar pedido
+                Pedido pedidoGuardado = PR.save(newPedido);
+                return pedidoGuardado;
             }
         }
-        return null;
+        // Si falla alguna validación, retorna null o lanza una excepción
+        throw new IllegalArgumentException("Pedido incompleto o cliente no encontrado");
     }
 
     //PUT
