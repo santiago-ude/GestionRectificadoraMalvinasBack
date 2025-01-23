@@ -24,7 +24,6 @@ public class Presupuesto {
     @Column(name = "descuento")
     private Number descuento;
 
-
     @ElementCollection
     @CollectionTable(name = "tbl_items", joinColumns = @JoinColumn(name = "id_presupuesto"))
     private List<Item> items;
@@ -32,6 +31,11 @@ public class Presupuesto {
     @Column(name = "total_presupuesto", nullable = false)
     private Number total;
 
+    //Constructor
+
+
+    public Presupuesto() {
+    }
 
     //Getters and Setters
     public Long getId() {
