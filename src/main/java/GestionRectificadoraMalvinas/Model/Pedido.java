@@ -14,7 +14,7 @@ public class Pedido {
     @Column(name = "id_pedido")
     private long id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_cliente", nullable = false)
     private Cliente cliente;
 
@@ -30,8 +30,8 @@ public class Pedido {
     @Column(name = "estado_pedido", nullable = false)
     private String estado; //o enum
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_presupuesto", referencedColumnName = "id_presupuesto")
+    @OneToOne
+    @JoinColumn(name = "id_presupuesto_asociado", referencedColumnName = "id_presupuesto")
     private Presupuesto presupuesto;
 
     @Column(name = "marca_auto", nullable = false)
