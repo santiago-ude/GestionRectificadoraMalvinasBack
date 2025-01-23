@@ -31,6 +31,13 @@ public class Cliente {
     @Column(name = "metodo_de_pago", nullable = false)
     private String metodoPago;
 
+    //Constructor
+
+
+    public Cliente() {
+
+    }
+
     //Getters and Setters
     public Long getId() {
         return id;
