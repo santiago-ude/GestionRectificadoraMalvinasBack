@@ -12,10 +12,13 @@ public class Item {
     private Number precioManoObra;
     private Number precioFinal;
 
+    //Constructor
+
+
+    public Item() {
+    }
 
     //Getters and Setters
-
-
     public String getNombre() {
         return nombre;
     }
