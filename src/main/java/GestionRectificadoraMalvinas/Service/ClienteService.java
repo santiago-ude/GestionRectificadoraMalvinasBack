@@ -123,7 +123,11 @@ public class ClienteService {
         return null;
     }
 
-    //DELETE
+    /**
+     * DELETE : Borra el cliente con el ID especificado
+     * @param id : Parametro por el que se busca el cliente que se quiere eliminar
+     * @return : Retorna el cliente eliminado, o null en caso de no haberlo encontrado
+     */
     public Cliente deleteCliente(Long id){
         Optional<Cliente> search = CR.findById(id);
         if(search.isPresent()){
