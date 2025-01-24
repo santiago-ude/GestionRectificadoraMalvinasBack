@@ -6,8 +6,6 @@ import jakarta.persistence.*;
 import java.util.Date;
 import java.util.List;
 
-//FALTA TERMINAR
-
 @Entity
 @Table(name = "tbl_presupuesto")
 public class Presupuesto {
