@@ -24,7 +24,12 @@ public class ClienteService {
         return CR.findAll();
     }
 
-    //GET By ID
+
+    /**
+     * GETByID: Busca un cliente por ID
+     * @param id : Parametro por el que se busca el cliente
+     * @return : Retorna un Optional con el Cliente encontrado, o vacio en caso de no ecnontrarlo
+     */
     public Optional<Cliente> getClienteById(Long id){
         return CR.findById(id);
     }
