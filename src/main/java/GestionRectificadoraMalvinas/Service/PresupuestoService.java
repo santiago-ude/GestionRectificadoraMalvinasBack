@@ -83,7 +83,12 @@ public class PresupuestoService {
    return null;
 }
 
-    //PATCH
+    /**
+     * PATCH: Actualiza de manera parcial, campo por campo, sin necesitar un Presupuesto entero
+     * @param id : Parametro por el que se busca el Presupuesto que se quiere actualizar
+     * @param newPresupuesto : Nuevo Presupuesto, puede ser un solo campo, que reemplazara al buscado
+     * @return : retorna el nuevo Presupuesto o null en caso de no encontrarlo
+     */
     public Presupuesto patchPresupuesto(Long id, Presupuesto newPresupuesto){
 
             Optional<Presupuesto> search = PR.findById(id);
