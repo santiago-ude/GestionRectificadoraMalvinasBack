@@ -34,7 +34,11 @@ public class ClienteService {
         return CR.findById(id);
     }
 
-    //POST
+    /**
+     * POST: Guarda y almacena un nuevo cliente en caso de que todos sus campos esten completos
+     * @param newCliente : Cliente el cual se valida y almacena en caso de exito
+     * @return : Retorna el nuevo cliente o null en caso de estar incompleto
+     */
     public Cliente postCliente(Cliente newCliente){
 
         if(newCliente.getAltura() != null
