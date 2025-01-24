@@ -31,7 +31,11 @@ public class PedidoService {
         return PR.findAll();
     }
 
-    //GETById
+    /**
+     * GETByID: Busca un pedido por ID
+     * @param id : Parametro por el que se busca el pedido
+     * @return : Retorna un Optional con el pedido encontrado, o vacio en caso de no encontrarlo
+     */
     public Optional<Pedido> getPedidoById(Long id){
         return PR.findById(id);
     }
