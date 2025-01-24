@@ -26,7 +26,11 @@ public class PresupuestoService {
         return PR.findAll();
     }
 
-    //GETByID
+    /**
+     * GETByID: Busca un Presupuesto por ID
+     * @param id : Parametro por el que se busca el Presupuesto
+     * @return : Retorna un Optional con el Presupuesto encontrado, o vacio en caso de no ecnontrarlo
+     */
     public Optional<Presupuesto> getPresupuestoById(Long id){
         return PR.findById(id);
     }
