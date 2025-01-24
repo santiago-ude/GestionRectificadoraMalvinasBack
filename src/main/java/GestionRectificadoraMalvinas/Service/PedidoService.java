@@ -77,7 +77,12 @@ public class PedidoService {
         return null;
     }
 
-    //PUT
+    /**
+     * PUT: Actualiza de manera completa un Pedido validado para que no falte ningun campo
+     * @param id : Parametro por el que se busca el Pedido que se quiere actualizar
+     * @param newPedido : Pedido el cual va a reemplazar al buscado
+     * @return retorna el nuevo Pedido en caso de exito, o null en caso de invalidez.
+     */
     public Pedido putPedido(Long id, Pedido newPedido){
 
         if(newPedido.getCliente() != null
