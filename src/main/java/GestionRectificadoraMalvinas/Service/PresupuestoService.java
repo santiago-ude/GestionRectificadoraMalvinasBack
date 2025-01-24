@@ -35,7 +35,11 @@ public class PresupuestoService {
         return PR.findById(id);
     }
 
-    //POST
+    /**
+     * POST: Guarda y almacena un nuevo Presupuesto en caso de que todos sus campos esten completos
+     * @param newPresupuesto : Presupuesto el cual se valida y almacena en caso de exito
+     * @return : Retorna el nuevo Presupuesto o null en caso de estar incompleto
+     */
     public Presupuesto postPresupuesto(Presupuesto newPresupuesto){
 
         if(newPresupuesto.getFecha() != null
