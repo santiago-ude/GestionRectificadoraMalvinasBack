@@ -36,7 +36,11 @@ public class PedidoService {
         return PR.findById(id);
     }
 
-    //POST
+    /**
+     * POST: Guarda y almacena un nuevo pedido en caso de que todos sus campos esten completos
+     * @param newPedido : pedido el cual se valida y almacena en caso de exito
+     * @return : Retorna el nuevo pedido o null en caso de estar incompleto
+     */
     public Pedido postPedido(Pedido newPedido) {
         // Validar que todos los campos de Pedido son válidos
             if (newPedido.getCliente().getId() != null
