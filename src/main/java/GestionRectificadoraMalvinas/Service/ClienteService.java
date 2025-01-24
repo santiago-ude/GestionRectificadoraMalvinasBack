@@ -16,7 +16,10 @@ public class ClienteService {
     ClienteRepository CR;
 
 
-    //GET
+    /**
+     * GET: Retorna todos los clientes almacenados
+     * @return : Retorna una lista con o sin clientes almacenados.
+     */
     public List<Cliente> getClientes(){
         return CR.findAll();
     }
