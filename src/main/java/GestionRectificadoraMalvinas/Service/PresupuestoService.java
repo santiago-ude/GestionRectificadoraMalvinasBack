@@ -52,8 +52,13 @@ public class PresupuestoService {
     return null;
     }
 
-    //PUT
-public Presupuesto putPresupuesto(Long id, Presupuesto newPresupuesto){
+    /**
+     * PUT: Actualiza de manera completa un Presupuesto validado para que no falte ningun campo
+     * @param id : Parametro por el que se busca el Presupuesto que se quiere actualizar
+     * @param newPresupuesto : Presupuesto el cual va a reemplazar al buscado
+     * @return : retorna el nuevo Presupuesto en caso de exito, o null en caso de invalidez.
+     */
+    public Presupuesto putPresupuesto(Long id, Presupuesto newPresupuesto){
 
     if(newPresupuesto.getFecha() != null
             && newPresupuesto.getDescuento() != null
