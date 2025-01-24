@@ -65,9 +65,9 @@ public class PresupuestoService {
             && newPresupuesto.getItems() != null
             && newPresupuesto.getTotal() != null){
 
-        Optional<Presupuesto> search = PR.findById(id);
-        if(search.isPresent()){
-            Presupuesto aux = search.get();
+            Optional<Presupuesto> search = PR.findById(id);
+            if(search.isPresent()){
+                Presupuesto aux = search.get();
 
             //update
             aux.setDescuento(newPresupuesto.getDescuento());
