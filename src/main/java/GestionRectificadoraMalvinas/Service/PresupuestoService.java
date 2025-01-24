@@ -110,7 +110,11 @@ public class PresupuestoService {
     }
 
 
-    //DELETE
+    /**
+     * DELETE: Borra el Presupuesto con el ID especificado
+     * @param id : Parametro por el que se busca el Presupuesto que se quiere eliminar
+     * @return : Retorna el Presupuesto eliminado, o null en caso de no haberlo encontrado
+     */
     public Presupuesto deletePresupuesto(Long id){
         Optional<Presupuesto> search = PR.findById(id);
         if(search.isPresent()){
