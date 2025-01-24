@@ -73,7 +73,7 @@ public class PedidoService {
                     }
                 }
             }
-        // Si falla alguna validación, retorna null o lanza una excepción
+        // Si falla alguna validación, retorna null.
         return null;
     }
 
