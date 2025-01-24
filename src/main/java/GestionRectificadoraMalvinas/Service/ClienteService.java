@@ -94,7 +94,12 @@ public class ClienteService {
         return null;
     }
 
-    //PATCH
+    /**
+     * PATCH: Actualiza de manera parcial, campo por campo, sin necesitar un cliente entero
+     * @param id : Parametro por el que se busca el cliente que se quiere actualizar
+     * @param newCliente : Nuevo cliente, puede ser un solo campo, que reemplazara al buscado
+     * @return : retorna el nuevo cliente o null en caso de no encontrarlo
+     */
     public Cliente patchCliente(Long id, Cliente newCliente){
 
             Optional<Cliente> search = CR.findById(id);
