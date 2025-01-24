@@ -26,7 +26,11 @@ public class PedidoService {
     PresupuestoService PS;
 
 
-    //GET
+    /**
+     * GET: Retorna todos los pedidos almacenados
+     * @return : Retorna una lista con o sin pedidos almacenados.
+     *
+     */
     public List<Pedido> getPedidos(){
         return PR.findAll();
     }
