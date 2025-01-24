@@ -112,7 +112,12 @@ public class PedidoService {
         return null;
     }
 
-    //PATCH
+    /**
+     * PATCH: Actualiza de manera parcial, campo por campo, sin necesitar un Pedido entero
+     * @param id : Parametro por el que se busca el Pedido que se quiere actualizar
+     * @param newPedido: Nuevo Pedido, puede ser un solo campo, que reemplazara al buscado
+     * @return : retorna el nuevo Pedido o null en caso de no encontrarlo
+     */
     public Pedido patchPedido(Long id, Pedido newPedido){
 
             Optional<Pedido> search = PR.findById(id);
