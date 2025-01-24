@@ -18,7 +18,10 @@ public class PresupuestoService {
     PresupuestoRepository PR;
 
 
-    //GET
+    /**
+     * GET: Retorna todos los Presupuestos almacenados
+     * @return : Retorna una lista con o sin Presupuestos almacenados.
+     */
     public List<Presupuesto> getPresupuestos(){
         return PR.findAll();
     }
