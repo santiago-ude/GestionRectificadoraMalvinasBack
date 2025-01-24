@@ -56,7 +56,12 @@ public class ClienteService {
         return null;
     }
 
-    //PUT
+    /**
+     * PUT: Actualiza de manera completa un Cliente validado para que no falte ningun campo
+     * @param id : Parametro por el que se busca el cliente que se quiere actualizar
+     * @param newCliente : Cliente el cual va a reemplazar al buscado
+     * @return : retorna el nuevo cliente en caso de exito, o null en caso de invalidez.
+     */
     public Cliente putCliente(Long id, Cliente newCliente){
 
         if(newCliente.getAltura() != null
