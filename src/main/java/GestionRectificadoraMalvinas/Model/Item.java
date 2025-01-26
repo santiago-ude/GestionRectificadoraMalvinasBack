@@ -2,19 +2,32 @@ package GestionRectificadoraMalvinas.Model;
 
 import jakarta.persistence.*;
 
-@Embeddable
+@Entity
+@Table(name = "tbl_items")
 public class Item {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_item")
+    private Long id;
 
+    @Column(name = "nombre")
     private String nombre;
+
+    @Column(name = "descripcion")
     private String descripcion;
+
+    @Column(name = "precio_unitario")
     private Number precioUnitario;
+
+    @Column(name = "precio_mano_obra")
     private Number precioManoObra;
+
+    @Column(name = "precio_final")
     private Number precioFinal;
 
+
     //Constructor
-
-
     public Item() {
     }
 
