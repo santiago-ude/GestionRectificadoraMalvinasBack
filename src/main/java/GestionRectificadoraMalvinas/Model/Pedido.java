@@ -18,6 +18,7 @@ public class Pedido {
     @JoinColumn(name = "id_cliente", nullable = false)
     private Cliente cliente;
 
+    @Temporal(TemporalType.DATE)
     @Column(name = "fecha_entrada", nullable = false)
     private Date fechaEntrada;
 
