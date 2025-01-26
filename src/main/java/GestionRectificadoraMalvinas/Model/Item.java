@@ -66,7 +66,7 @@ public class Item {
         return precioManoObra;
     }
 
-    public void setPrecioManoObra(Number precioManoObra) {
+    public void setPrecioManoObra(BigDecimal precioManoObra) {
         this.precioManoObra = precioManoObra;
     }
 
