@@ -70,7 +70,7 @@ public class Item {
         this.precioManoObra = precioManoObra;
     }
 
-    public Number getPrecioFinal() {
+    public BigDecimal getPrecioFinal() {
         return precioFinal;
     }
 
