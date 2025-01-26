@@ -14,7 +14,7 @@ public class Pedido {
     @Column(name = "id_pedido")
     private long id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "id_cliente", nullable = false)
     private Cliente cliente;
 
