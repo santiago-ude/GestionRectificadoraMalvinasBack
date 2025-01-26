@@ -17,6 +17,7 @@ import java.util.Optional;
 @RequestMapping("/clientes")
 public class ClienteController {
 
+    //Inyeccion dependencia del servicio del cliente
     @Autowired
     ClienteService CS;
 
