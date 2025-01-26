@@ -22,8 +22,8 @@ public class Presupuesto {
     @Column(name = "descuento")
     private Number descuento;
 
-    @ElementCollection
-    @CollectionTable(name = "tbl_items", joinColumns = @JoinColumn(name = "id_presupuesto"))
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_presupuesto")
     private List<Item> items;
 
     @Column(name = "total_presupuesto", nullable = false)
