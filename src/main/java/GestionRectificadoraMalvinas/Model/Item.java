@@ -23,10 +23,10 @@ public class Item {
     private BigDecimal precioUnitario;
 
     @Column(name = "precio_mano_obra")
-    private Number precioManoObra;
+    private BigDecimal precioManoObra;
 
     @Column(name = "precio_final")
-    private Number precioFinal;
+    private BigDecimal precioFinal;
 
 
     //Constructor
@@ -54,11 +54,11 @@ public class Item {
         this.descripcion = descripcion;
     }
 
-    public Number getPrecioUnitario() {
+    public BigDecimal getPrecioUnitario() {
         return precioUnitario;
     }
 
-    public void setPrecioUnitario(Number precioUnitario) {
+    public void setPrecioUnitario(BigDecimal precioUnitario) {
         this.precioUnitario = precioUnitario;
     }
 
