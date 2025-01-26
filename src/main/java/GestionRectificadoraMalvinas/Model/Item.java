@@ -62,7 +62,7 @@ public class Item {
         this.precioUnitario = precioUnitario;
     }
 
-    public Number getPrecioManoObra() {
+    public BigDecimal getPrecioManoObra() {
         return precioManoObra;
     }
 
