@@ -2,6 +2,8 @@ package GestionRectificadoraMalvinas.Model;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "tbl_items")
 public class Item {
@@ -72,7 +74,7 @@ public class Item {
         return precioFinal;
     }
 
-    public void setPrecioFinal(Number precioFinal) {
+    public void setPrecioFinal(BigDecimal precioFinal) {
         this.precioFinal = precioFinal;
     }
 }
