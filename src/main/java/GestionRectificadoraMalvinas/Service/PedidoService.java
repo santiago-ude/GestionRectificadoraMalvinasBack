@@ -65,22 +65,14 @@ public class PedidoService {
                 // Verificar que el cliente existe
                 Optional<Cliente> clienteExistente = CR.findById(newPedido.getCliente().getId());
                 if (clienteExistente.isPresent()) {
-
                     // Asociar cliente existente
                     newPedido.setCliente(clienteExistente.get());
 
-
-
                     //Asociar y persistir presupuesto antes del pedido
                     Presupuesto presupuesto = PS.postPresupuesto(newPedido.getPresupuesto());
-
-
                     if (presupuesto != null) {
-
                         newPedido.setPresupuesto(presupuesto); //asocio al pedido
-
                         PR.save(newPedido);
-
                         return newPedido;
                     }
                 }
