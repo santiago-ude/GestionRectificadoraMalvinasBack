@@ -26,6 +26,7 @@ public class Pedido {
     @Column(name = "fecha_salida_estimada", nullable = false)
     private Date fechaSalidaEstimada;
 
+    @Temporal(TemporalType.DATE)
     @Column(name = "fecha_entrega_efectiva", nullable = false)
     private Date fechaEntregaEfectiva;
 
