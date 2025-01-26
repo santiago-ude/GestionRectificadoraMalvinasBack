@@ -31,6 +31,10 @@ public class Item {
     public Item() {
     }
 
+    public Long getId() {
+        return id;
+    }
+
     //Getters and Setters
     public String getNombre() {
         return nombre;
