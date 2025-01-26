@@ -20,7 +20,7 @@ public class Item {
     private String descripcion;
 
     @Column(name = "precio_unitario")
-    private Number precioUnitario;
+    private BigDecimal precioUnitario;
 
     @Column(name = "precio_mano_obra")
     private Number precioManoObra;
