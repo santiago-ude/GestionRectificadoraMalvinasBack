@@ -47,6 +47,7 @@ public class PresupuestoService {
            && (newPresupuesto.getItems() != null || !newPresupuesto.getItems().isEmpty())
            && newPresupuesto.getTotal() != null){
 
+
             return PR.save(newPresupuesto);
         }
     return null;
@@ -111,7 +112,7 @@ public class PresupuestoService {
 
 
     /**
-     * DELETEf: Borra el Presupuesto con el ID especificado
+     * DELETE: Borra el Presupuesto con el ID especificado
      * @param id : Parametro por el que se busca el Presupuesto que se quiere eliminar
      * @return : Retorna el Presupuesto eliminado, o null en caso de no haberlo encontrado
      */
