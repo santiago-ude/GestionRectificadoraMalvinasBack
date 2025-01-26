@@ -3,6 +3,7 @@ package GestionRectificadoraMalvinas.Model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -20,14 +21,14 @@ public class Presupuesto {
     private Date fecha;
 
     @Column(name = "descuento")
-    private Number descuento;
+    private Integer descuento;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_presupuesto")
     private List<Item> items;
 
     @Column(name = "total_presupuesto", nullable = false)
-    private Number total;
+    private BigDecimal total;
 
 
 
@@ -49,11 +50,11 @@ public class Presupuesto {
         this.fecha = fecha;
     }
 
-    public Number getDescuento() {
+    public Integer getDescuento() {
         return descuento;
     }
 
-    public void setDescuento(Number descuento) {
+    public void setDescuento(Integer descuento) {
         this.descuento = descuento;
     }
 
@@ -65,11 +66,11 @@ public class Presupuesto {
         this.items = items;
     }
 
-    public Number getTotal() {
+    public BigDecimal getTotal() {
         return total;
     }
 
-    public void setTotal(Number total) {
+    public void setTotal(BigDecimal total) {
         this.total = total;
     }
 
