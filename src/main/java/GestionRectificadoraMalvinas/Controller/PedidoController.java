@@ -16,6 +16,7 @@ import java.util.Optional;
 @RequestMapping("/pedidos")
 public class PedidoController {
 
+    //Inyeccion dependencia del servicio de pedidos
     @Autowired
     PedidoService PS;
 
