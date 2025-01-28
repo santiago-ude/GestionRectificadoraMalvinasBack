@@ -15,6 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/clientes")
+@CrossOrigin(origins = "http://localhost:4200") // Cambia a la URL de tu frontend
 public class ClienteController {
 
     //Inyeccion dependencia del servicio del cliente
