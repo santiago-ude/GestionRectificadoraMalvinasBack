@@ -14,6 +14,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/pedidos")
+@CrossOrigin(origins = "http://localhost:4200") // Cambia a la URL de tu frontend
 public class PedidoController {
 
     //Inyeccion dependencia del servicio de pedidos
