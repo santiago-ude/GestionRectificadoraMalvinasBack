@@ -47,7 +47,6 @@ public class PresupuestoService {
            && (newPresupuesto.getItems() != null || !newPresupuesto.getItems().isEmpty())
            && newPresupuesto.getTotal() != null){
 
-
             return PR.save(newPresupuesto);
         }
     return null;
