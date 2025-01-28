@@ -17,6 +17,7 @@ import java.util.Optional;
 //FALTA TERMINAR
 @RestController
 @RequestMapping("/presupuestos")
+@CrossOrigin(origins = "http://localhost:4200") // Cambia a la URL de tu frontend
 public class PresupuestoController {
 
     //Inyeccion de dependencia del servicio de presupuesto
