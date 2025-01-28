@@ -16,6 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/items")
+@CrossOrigin(origins = "http://localhost:4200") // Cambia a la URL de tu frontend
 public class ItemController {
 
     //Inyeccion de dependencias servicio para los item
