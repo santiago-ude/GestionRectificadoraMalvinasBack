@@ -124,7 +124,7 @@ public class ClienteService {
     }
 
     /**
-     * DELETE : Borra el cliente con el ID especificado
+     * DELETE: Borra el cliente con el ID especificado
      * @param id : Parametro por el que se busca el cliente que se quiere eliminar
      * @return : Retorna el cliente eliminado, o null en caso de no haberlo encontrado
      */
