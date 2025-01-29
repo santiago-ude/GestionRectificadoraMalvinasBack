@@ -151,6 +151,7 @@ public class PedidoService {
     }
 
     /**
+     * DELETE: Borra el Pedido con el ID especificado
      * @param id : Parametro por el que se busca el Pedido que se quiere eliminar
      * @return : Retorna el Pedido eliminado, o null en caso de no haberlo encontrado
      */
