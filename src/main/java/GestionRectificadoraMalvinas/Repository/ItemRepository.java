@@ -1,6 +1,3 @@
-//package GestionRectificadoraMalvinas.Repository;
-//
-//import GestionRectificadoraMalvinas.Model.Item;
 //import org.springframework.data.jpa.repository.JpaRepository;
 //import org.springframework.stereotype.Repository;
 //
