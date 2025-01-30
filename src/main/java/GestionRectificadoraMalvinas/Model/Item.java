@@ -4,28 +4,15 @@ import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
-@Entity
-@Table(name = "tbl_items")
+@Embeddable
 public class Item {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_item")
-    private Long id;
 
-    @Column(name = "nombre")
+
     private String nombre;
-
-    @Column(name = "descripcion")
     private String descripcion;
-
-    @Column(name = "precio_unitario")
     private BigDecimal precioUnitario;
-
-    @Column(name = "precio_mano_obra")
     private BigDecimal precioManoObra;
-
-    @Column(name = "precio_final")
     private BigDecimal precioFinal;
 
 
@@ -33,9 +20,7 @@ public class Item {
     public Item() {
     }
 
-    public Long getId() {
-        return id;
-    }
+
 
     //Getters and Setters
     public String getNombre() {
