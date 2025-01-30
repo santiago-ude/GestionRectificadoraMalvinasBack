@@ -56,13 +56,16 @@ public class PedidoService {
             if (newPedido.getCliente().getId() != null
                 && newPedido.getFechaEntrada() != null
                 && newPedido.getFechaSalidaEstimada() != null
-                && newPedido.getFechaEntregaEfectiva() != null
                 && newPedido.getEstado() != null
                 && newPedido.getPresupuesto() != null
                 && newPedido.getMarcaAuto() != null
                 && newPedido.getModeloAuto() != null
                 && newPedido.getNumeroSerie() != null
                 && newPedido.getDescripcion() != null) {
+
+
+                //----------------------------------------------------
+
 
                 // Verificar que el cliente existe
                 Optional<Cliente> clienteExistente = CR.findById(newPedido.getCliente().getId());
