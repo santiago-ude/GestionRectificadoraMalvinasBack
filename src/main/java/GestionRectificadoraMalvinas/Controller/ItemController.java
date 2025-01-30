@@ -1,27 +1,3 @@
-//@RequestMapping("/items")
-//@CrossOrigin(origins = "http://localhost:4200") // Cambia a la URL de tu frontend
-//public class ItemController {
-//
-//    //Inyeccion de dependencias servicio para los item
-//    @Autowired
-//    ItemService IS;
-//
-//    //GET
-//    @GetMapping
-//    public ResponseEntity<?> getItem(){
-//        return ResponseEntity.ok(IS.getItems());
-//    }
-//
-//    //GETById
-//    @GetMapping("/{id}")
-//    public ResponseEntity<?> getItemById(@PathVariable Long id){
-//        Optional<Item> search = IS.getItemById(id);
-//        if(search.isPresent()){
-//            return ResponseEntity.ok(search.get());
-//        }
-//        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item no encontrado");
-//    }
-//
 //    //POST
 //    @PostMapping
 //    public ResponseEntity<?> postItem(@RequestBody Item newItem){
