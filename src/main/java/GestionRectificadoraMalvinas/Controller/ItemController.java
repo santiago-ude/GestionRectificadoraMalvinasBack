@@ -1,10 +1,3 @@
-//    public ResponseEntity<?> putItem(@PathVariable Long id, @RequestBody Item newItem){
-//
-//        Item aux = IS.putItem(id,newItem);
-//        if(aux != null){
-//
-//         return ResponseEntity.noContent().build();
-//        }
 //        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item no encontrado o incompleto");
 //    }
 //
