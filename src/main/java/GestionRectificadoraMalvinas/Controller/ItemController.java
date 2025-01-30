@@ -1,20 +1,3 @@
-//package GestionRectificadoraMalvinas.Controller;
-//
-//
-//import GestionRectificadoraMalvinas.Model.Item;
-//import GestionRectificadoraMalvinas.Service.ItemService;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.http.HttpEntity;
-//import org.springframework.http.HttpStatus;
-//import org.springframework.http.HttpStatusCode;
-//import org.springframework.http.ResponseEntity;
-//import org.springframework.web.bind.annotation.*;
-//import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-//
-//import java.net.URI;
-//import java.util.Optional;
-//
-//@RestController
 //@RequestMapping("/items")
 //@CrossOrigin(origins = "http://localhost:4200") // Cambia a la URL de tu frontend
 //public class ItemController {
