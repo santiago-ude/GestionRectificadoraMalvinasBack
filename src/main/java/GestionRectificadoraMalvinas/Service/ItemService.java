@@ -1,7 +1,3 @@
-//
-//    //PATCH
-//    public Item patchItem(Long id, Item newItem){
-//
 //        Optional<Item> search = IR.findById(id);
 //        if(search.isPresent()){
 //            Item aux = search.get();
