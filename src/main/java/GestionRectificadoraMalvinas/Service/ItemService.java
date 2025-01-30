@@ -1,7 +1,3 @@
-//    //DELETE
-//    public Item deleteItem(Long id){
-//
-//        Optional<Item> search = IR.findById(id);
 //        if(search.isPresent()){
 //
 //            IR.deleteById(id);
