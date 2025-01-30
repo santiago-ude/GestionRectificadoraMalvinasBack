@@ -1,7 +1,3 @@
-//        Optional<Item> search = IR.findById(id);
-//        if(search.isPresent()){
-//            Item aux = search.get();
-//
 //            if(newItem.getNombre() != null){aux.setNombre(newItem.getNombre());}
 //            if(newItem.getDescripcion() != null){aux.setDescripcion(newItem.getDescripcion());}
 //            if(newItem.getPrecioUnitario() != null){aux.setPrecioUnitario(newItem.getPrecioUnitario());}
