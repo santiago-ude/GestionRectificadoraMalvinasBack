@@ -1,33 +1,3 @@
-//    //POST
-//    public Item postItem(Item newItem){
-//        if(newItem.getNombre() != null
-//            && newItem.getDescripcion() != null
-//            && newItem.getPrecioUnitario() != null
-//            && newItem.getPrecioManoObra() != null
-//            && newItem.getPrecioFinal() != null){
-//
-//            IR.save(newItem);
-//            return newItem;
-//        }
-//       return null;
-//    }
-//
-//    //PUT
-//    public Item putItem(Long id, Item newItem){
-//
-//        if(newItem.getNombre() != null
-//        && newItem.getDescripcion() != null
-//        && newItem.getPrecioUnitario() != null
-//        && newItem.getPrecioManoObra() != null
-//        && newItem.getPrecioFinal() != null){
-//
-//            Optional<Item> search = IR.findById(id);
-//            if(search.isPresent()){
-//                Item aux = search.get();
-//                aux.setNombre(newItem.getNombre());
-//                aux.setDescripcion(newItem.getDescripcion());
-//                aux.setPrecioUnitario(newItem.getPrecioUnitario());
-//                aux.setPrecioManoObra(newItem.getPrecioManoObra());
 //                aux.setPrecioFinal(newItem.getPrecioFinal());
 //
 //                IR.save(aux);
