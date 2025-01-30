@@ -95,24 +95,12 @@ public class PedidoService {
      */
     public Pedido putPedido(Long id, Pedido newPedido){
 
-        if(newPedido.getCliente() != null
-                && newPedido.getFechaEntrada() != null
-                && newPedido.getFechaSalidaEstimada() != null
-                && newPedido.getFechaEntregaEfectiva() != null
-                && newPedido.getEstado() != null
-                && newPedido.getPresupuesto() != null
-                && newPedido.getMarcaAuto() != null
-                && newPedido.getModeloAuto() != null
-                && newPedido.getNumeroSerie() != null
-                && newPedido.getDescripcion() != null){
-
             Optional<Pedido> search = PR.findById(id);
             if(search.isPresent()){
                 Pedido aux = search.get();
                 aux.setCliente(newPedido.getCliente());
                 aux.setFechaEntrada(newPedido.getFechaEntrada());
                 aux.setFechaSalidaEstimada(newPedido.getFechaSalidaEstimada());
-                aux.setFechaEntregaEfectiva(newPedido.getFechaEntregaEfectiva());
                 aux.setEstado(newPedido.getEstado());
                 aux.setPresupuesto(newPedido.getPresupuesto());
                 aux.setMarcaAuto(newPedido.getMarcaAuto());
@@ -123,9 +111,10 @@ public class PedidoService {
                 PR.save(aux);
                 return aux;
             }
-        }
+
         return null;
     }
+
 
 
     /**
@@ -143,7 +132,6 @@ public class PedidoService {
                 if(newPedido.getCliente() != null){aux.setCliente(newPedido.getCliente());};
                 if(newPedido.getFechaEntrada() != null){aux.setFechaEntrada(newPedido.getFechaEntrada());}
                 if(newPedido.getFechaSalidaEstimada() != null){aux.setFechaSalidaEstimada(newPedido.getFechaSalidaEstimada());}
-                if(newPedido.getFechaEntregaEfectiva() != null){aux.setFechaEntregaEfectiva(newPedido.getFechaEntregaEfectiva());}
                 if(newPedido.getEstado() != null){aux.setEstado(newPedido.getEstado());}
                 if(newPedido.getPresupuesto() != null){aux.setPresupuesto(newPedido.getPresupuesto());}
                 if(newPedido.getMarcaAuto() != null){aux.setMarcaAuto(newPedido.getMarcaAuto());}
