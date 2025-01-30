@@ -49,6 +49,7 @@ public class ClienteService {
                 && newCliente.getMetodoPago() != null
                 && newCliente.getAltura() != null
                 && newCliente.getNumero() != null){
+
             CR.save(newCliente);
             return newCliente;
 
