@@ -1,11 +1,3 @@
-//                aux.setPrecioFinal(newItem.getPrecioFinal());
-//
-//                IR.save(aux);
-//                return aux;
-//            }
-//        }
-//        return null;
-//    }
 //
 //    //PATCH
 //    public Item patchItem(Long id, Item newItem){
