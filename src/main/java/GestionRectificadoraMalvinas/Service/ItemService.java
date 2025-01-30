@@ -1,5 +1,3 @@
-//            if(newItem.getPrecioManoObra() != null){aux.setPrecioManoObra(newItem.getPrecioManoObra());}
-//            if(newItem.getPrecioFinal() != null){aux.setPrecioFinal(newItem.getPrecioFinal());}
 //
 //            IR.save(aux);
 //            return aux;
