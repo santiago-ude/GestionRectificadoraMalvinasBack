@@ -1,31 +1,3 @@
-//package GestionRectificadoraMalvinas.Service;
-//
-//import GestionRectificadoraMalvinas.Model.Item;
-//import GestionRectificadoraMalvinas.Repository.ItemRepository;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.stereotype.Service;
-//
-//import javax.swing.text.html.Option;
-//import java.util.List;
-//import java.util.Optional;
-//
-//@Service
-//public class ItemService {
-//
-//    @Autowired
-//    ItemRepository IR;
-//
-//
-//    //GET
-//    public List<Item> getItems(){
-//        return IR.findAll();
-//    }
-//
-//    //GETById
-//    public Optional<Item> getItemById(Long id){
-//        return IR.findById(id);
-//    }
-//
 //    //POST
 //    public Item postItem(Item newItem){
 //        if(newItem.getNombre() != null
