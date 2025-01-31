@@ -107,6 +107,7 @@ public class PedidoService {
                 aux.setNumeroSerie(newPedido.getNumeroSerie());
                 aux.setDescripcion(newPedido.getDescripcion());
 
+
                 PR.save(aux);
                 return aux;
             }
