@@ -83,7 +83,7 @@ public class Pedido {
         this.fechaSalidaEstimada = fechaSalidaEstimada;
     }
 
-    public Date getFechaEntregaEfectiva() {
+    public LocalDate getFechaEntregaEfectiva() {
         return fechaEntregaEfectiva;
     }
 
