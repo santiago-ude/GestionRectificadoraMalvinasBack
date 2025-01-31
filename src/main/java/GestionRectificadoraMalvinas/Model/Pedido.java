@@ -75,7 +75,7 @@ public class Pedido {
         this.fechaEntrada = fechaEntrada;
     }
 
-    public Date getFechaSalidaEstimada() {
+    public LocalDate getFechaSalidaEstimada() {
         return fechaSalidaEstimada;
     }
 
