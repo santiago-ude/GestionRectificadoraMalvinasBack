@@ -87,7 +87,7 @@ public class Pedido {
         return fechaEntregaEfectiva;
     }
 
-    public void setFechaEntregaEfectiva(Date fechaEntregaEfectiva) {
+    public void setFechaEntregaEfectiva(LocalDate fechaEntregaEfectiva) {
         this.fechaEntregaEfectiva = fechaEntregaEfectiva;
     }
 
