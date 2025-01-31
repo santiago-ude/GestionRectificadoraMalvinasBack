@@ -67,7 +67,7 @@ public class Pedido {
         this.cliente = cliente;
     }
 
-    public Date getFechaEntrada() {
+    public LocalDate getFechaEntrada() {
         return fechaEntrada;
     }
 
