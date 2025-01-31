@@ -29,7 +29,7 @@ public class Pedido {
 
     @Temporal(TemporalType.DATE)
     @Column(name = "fecha_entrega_efectiva")
-    private Date fechaEntregaEfectiva;
+    private LocalDate fechaEntregaEfectiva;
 
     @Column(name = "estado_pedido", nullable = false)
     private String estado; //o enum
