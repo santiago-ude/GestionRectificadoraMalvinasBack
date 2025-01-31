@@ -79,7 +79,7 @@ public class Pedido {
         return fechaSalidaEstimada;
     }
 
-    public void setFechaSalidaEstimada(Date fechaSalidaEstimada) {
+    public void setFechaSalidaEstimada(LocalDate fechaSalidaEstimada) {
         this.fechaSalidaEstimada = fechaSalidaEstimada;
     }
 
