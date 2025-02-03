@@ -4,5 +4,5 @@ Para Correr:
 <li>Correr servidor xampp</li>
 <li>Crear BDD en mySQL con el nombre <strong>gestionrectificadoramalvinas<strong> </li>
 <li>Correr proyecto SpringBoot</li>
-<li>correr proyecto angular</li>
+<li>Correr proyecto angular</li>
 </ul>
