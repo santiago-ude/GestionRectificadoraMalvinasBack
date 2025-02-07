@@ -43,9 +43,6 @@ public class ClienteService {
 
             CR.save(newCliente);
             return newCliente;
-
-        }
-        return null;
     }
 
     /**
