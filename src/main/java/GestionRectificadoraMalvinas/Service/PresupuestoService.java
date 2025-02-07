@@ -53,8 +53,6 @@ public class PresupuestoService {
      */
     public Presupuesto putPresupuesto(Long id, Presupuesto newPresupuesto){
 
-        if(newPresupuesto.getFecha() != null
-            && newPresupuesto.getDescuento() != null
             && newPresupuesto.getItems() != null
             && newPresupuesto.getTotal() != null){
 
