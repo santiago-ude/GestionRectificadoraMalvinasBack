@@ -42,9 +42,6 @@ public class PresupuestoService {
      */
     public Presupuesto postPresupuesto(Presupuesto newPresupuesto){
 
-        if(newPresupuesto.getFecha() != null
-           && newPresupuesto.getDescuento() != null
-           && (newPresupuesto.getItems() != null || !newPresupuesto.getItems().isEmpty())
            && newPresupuesto.getTotal() != null){
 
             return PR.save(newPresupuesto);
