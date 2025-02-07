@@ -43,8 +43,6 @@ public class PresupuestoService {
     public Presupuesto postPresupuesto(Presupuesto newPresupuesto){
 
             return PR.save(newPresupuesto);
-        }
-    return null;
     }
 
     /**
