@@ -53,9 +53,6 @@ public class ClienteService {
      */
     public Cliente putCliente(Long id, Cliente newCliente){
 
-                && newCliente.getAltura() != null
-                && newCliente.getNumero() != null) {
-
             Optional<Cliente> search = CR.findById(id);
             if (search.isPresent()) {
                 Cliente aux = search.get();
