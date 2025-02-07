@@ -52,9 +52,6 @@ public class PedidoService {
      * @return : Retorna el nuevo pedido o null en caso de estar incompleto
      */
     public Pedido postPedido(Pedido newPedido) {
-        // Validar que todos los campos de Pedido son válidos
-            if (newPedido.getCliente().getId() != null
-                && newPedido.getFechaEntrada() != null
                 && newPedido.getFechaSalidaEstimada() != null
                 && newPedido.getEstado() != null
                 && newPedido.getPresupuesto() != null
