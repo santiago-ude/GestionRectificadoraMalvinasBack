@@ -53,9 +53,6 @@ public class ClienteService {
      */
     public Cliente putCliente(Long id, Cliente newCliente){
 
-                && newCliente.getDomicilio() != null
-                && newCliente.getNombre() != null
-                && newCliente.getMetodoPago() != null
                 && newCliente.getAltura() != null
                 && newCliente.getNumero() != null) {
 
