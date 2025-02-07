@@ -53,8 +53,6 @@ public class PresupuestoService {
      */
     public Presupuesto putPresupuesto(Long id, Presupuesto newPresupuesto){
 
-            && newPresupuesto.getItems() != null
-            && newPresupuesto.getTotal() != null){
 
             Optional<Presupuesto> search = PR.findById(id);
             if(search.isPresent()){
