@@ -1,5 +1,5 @@
 # Gestion Rectificadora Malvinas Back
-API en SpringBoot que unicamente realiza las request 
+API en SpringBoot que unicamente realiza las request conectadas a una BDD en MySQL donde almacena los clientes, pedidos, presupuestos e items provenientes del Front.
 Para Correr: 
 <ul>
 <li>Correr servidor xampp</li>
