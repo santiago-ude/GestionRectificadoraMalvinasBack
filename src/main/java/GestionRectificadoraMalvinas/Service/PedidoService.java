@@ -52,11 +52,6 @@ public class PedidoService {
      * @return : Retorna el nuevo pedido o null en caso de estar incompleto
      */
     public Pedido postPedido(Pedido newPedido) {
-
-
-                //----------------------------------------------------
-
-
                 // Verificar que el cliente existe
                 Optional<Cliente> clienteExistente = CR.findById(newPedido.getCliente().getId());
                 if (clienteExistente.isPresent()) {
