@@ -79,7 +79,8 @@ public class PedidoService {
      * @return retorna el nuevo Pedido en caso de exito, o null en caso de invalidez.
      */
     public Pedido putPedido(Long id, Pedido newPedido){
-                    Optional<Pedido> search = PR.findById(id);
+
+        Optional<Pedido> search = PR.findById(id);
             if(search.isPresent()){
                 Pedido aux = search.get();
                 aux.setCliente(newPedido.getCliente());
