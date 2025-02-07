@@ -1,4 +1,5 @@
 # Gestion Rectificadora Malvinas Back
+API en SpringBoot que unicamente realiza las request 
 Para Correr: 
 <ul>
 <li>Correr servidor xampp</li>
