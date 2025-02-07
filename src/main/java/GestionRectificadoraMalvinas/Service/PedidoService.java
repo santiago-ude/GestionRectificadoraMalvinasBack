@@ -52,9 +52,6 @@ public class PedidoService {
      * @return : Retorna el nuevo pedido o null en caso de estar incompleto
      */
     public Pedido postPedido(Pedido newPedido) {
-                && newPedido.getModeloAuto() != null
-                && newPedido.getNumeroSerie() != null
-                && newPedido.getDescripcion() != null) {
 
 
                 //----------------------------------------------------
