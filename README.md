@@ -8,3 +8,8 @@ API en SpringBoot que unicamente realiza las request conectadas a una BDD en MyS
 <li>Correr proyecto angular</li>
 </ul>
 <h2>Herramientas</h2>
+<p>GET, GETById, POST, PUT, PATCH, DELETE</p>
+<ul>
+<li>Cliente</li>
+
+</ul>
