@@ -12,5 +12,5 @@ API en SpringBoot que unicamente realiza las request conectadas a una BDD en MyS
 <ul>
 <li>Cliente</li>
 <li>Presupuestos</li>
-
+<li>Pedidos</li>
 </ul>
