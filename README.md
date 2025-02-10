@@ -7,5 +7,4 @@ API en SpringBoot que unicamente realiza las request conectadas a una BDD en MyS
 <li>Correr proyecto SpringBoot</li>
 <li>Correr proyecto angular</li>
 </ul>
-<br>
 <h2>Herramientas</h2>
