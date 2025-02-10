@@ -15,4 +15,4 @@ API en SpringBoot que unicamente realiza las request conectadas a una BDD en MyS
 <li>Pedidos</li>
 <li>Items esta incluido como una clase @embeddable en la clase Presupuesto</li>
 </ul>
-<p>Se opto por hacer todas las herramientas para cada una de las entidades. Actualmente, en esta version del proyecto, solo se usa los metodos GET, GETById, POST, PUT y DELETE, dejando el resto </p>
+<p>Se opto por hacer todas las herramientas para cada una de las entidades. Actualmente, en esta version del proyecto, solo se usa los metodos GET, GETById, POST, PUT y DELETE, dejando en las manos de alguna nueva versión que necesite del resto de los metodos</p>
