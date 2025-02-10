@@ -14,3 +14,4 @@ API en SpringBoot que unicamente realiza las request conectadas a una BDD en MyS
 <li>Presupuestos</li>
 <li>Pedidos</li>
 </ul>
+<p>Items esta incluido como una clase @Embebembeddable</p>
