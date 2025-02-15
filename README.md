@@ -1,5 +1,5 @@
 # Gestion Rectificadora Malvinas Back
-API en SpringBoot, con las entidades adaptadas mediante Spring JPA para poder ser almacenadas en una base de datos que unicamente realiza las Request conectadas a una BDD en MySQL donde almacena los clientes, pedidos, presupuestos e items provenientes del Front.
+API realizada en SpringBoot, con herramientas como Spring JPA para adaptar las entidades y poder almacenarlas en una base de datos en MySQL, 
 <h2>Para Correrlo:</h2>
 <ul>
 <li>Correr servidor xampp</li>
