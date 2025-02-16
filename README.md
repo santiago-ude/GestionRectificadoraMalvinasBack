@@ -16,4 +16,4 @@ API realizada en SpringBoot, con herramientas como Spring JPA para adaptar las e
 <li>Items esta incluido como una clase @embeddable en la clase Presupuesto</li>
 </ul>
 <p>
-  Se opto por hacer todas las herramientas 
+  Se opto por hacer todas las herramientas para cada una de las entidades. Actualmente, en esta version del proyecto, solo se usa los metodos GET, GETById, POST, PUT y DELETE, apto para proximas versiones o actualizaciones.
