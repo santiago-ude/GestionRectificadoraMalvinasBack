@@ -11,8 +11,8 @@ API realizada en SpringBoot, con herramientas como Spring JPA para adaptar las e
 <p>GET, GETById, POST, PUT, PATCH, DELETE</p>
 <ul>
 <li>Cliente</li>
-<li>Presupuestos</li>
-<li>Pedidos</li>
+<li>Presupuesto</li>
+<li>Pedido</li>
 <li>Items esta incluido como una clase @embeddable en la clase Presupuesto</li>
 </ul>
 <p>
