@@ -12,8 +12,4 @@ public class GestionParaLaRectificadoraMalvinasApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GestionParaLaRectificadoraMalvinasApplication.class, args);
 	}
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
 	}
