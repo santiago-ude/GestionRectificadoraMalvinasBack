@@ -13,3 +13,5 @@ public class GestionParaLaRectificadoraMalvinasApplication {
 		SpringApplication.run(GestionParaLaRectificadoraMalvinasApplication.class, args);
 	}
 	}
+
+}
