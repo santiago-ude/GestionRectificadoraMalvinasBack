@@ -63,7 +63,7 @@ public class ClienteController {
 
     Cliente aux = CS.putCliente(id,newCliente);
     if(aux != null){
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok(aux);
     }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cliente no encontrado o incompleto");
     }
