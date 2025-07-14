@@ -86,6 +86,7 @@ public class PedidoService {
                 aux.setCliente(newPedido.getCliente());
                 aux.setFechaEntrada(newPedido.getFechaEntrada());
                 aux.setFechaSalidaEstimada(newPedido.getFechaSalidaEstimada());
+                aux.setFechaEntregaEfectiva(newPedido.getFechaEntregaEfectiva());
                 aux.setEstado(newPedido.getEstado());
                 aux.setPresupuesto(newPedido.getPresupuesto());
                 aux.setMarcaAuto(newPedido.getMarcaAuto());
@@ -118,6 +119,7 @@ public class PedidoService {
                 if(newPedido.getCliente() != null){aux.setCliente(newPedido.getCliente());};
                 if(newPedido.getFechaEntrada() != null){aux.setFechaEntrada(newPedido.getFechaEntrada());}
                 if(newPedido.getFechaSalidaEstimada() != null){aux.setFechaSalidaEstimada(newPedido.getFechaSalidaEstimada());}
+                if(newPedido.getFechaEntregaEfectiva() != null){aux.setFechaEntregaEfectiva(newPedido.getFechaEntregaEfectiva());}
                 if(newPedido.getEstado() != null){aux.setEstado(newPedido.getEstado());}
                 if(newPedido.getPresupuesto() != null){aux.setPresupuesto(newPedido.getPresupuesto());}
                 if(newPedido.getMarcaAuto() != null){aux.setMarcaAuto(newPedido.getMarcaAuto());}
