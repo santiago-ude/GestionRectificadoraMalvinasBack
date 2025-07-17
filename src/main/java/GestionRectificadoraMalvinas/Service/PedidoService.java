@@ -52,14 +52,23 @@ public class PedidoService {
      * @return : Retorna el nuevo pedido o null en caso de estar incompleto
      */
     public Pedido postPedido(Pedido newPedido) {
+
                 // Verificar que el cliente existe
                 Optional<Cliente> clienteExistente = CR.findById(newPedido.getCliente().getId());
                 if (clienteExistente.isPresent()) {
                     // Asociar cliente existente
                     newPedido.setCliente(clienteExistente.get());
+                    Presupuesto presupuesto = newPedido.getPresupuesto();
+
+                    presupuesto.setAutoAsignado(newPedido.getMarcaAuto() + " " + newPedido.getModeloAuto());
+                    presupuesto.setNumeroSerie(newPedido.getNumeroSerie());
+
+                    Cliente cliente = clienteExistente.get();
+                    presupuesto.setPedidoANombreDe(cliente.getNombre() + " " + cliente.getApellido());
+
 
                     //Asociar y persistir presupuesto antes del pedido
-                    Presupuesto presupuesto = PS.postPresupuesto(newPedido.getPresupuesto());
+                    presupuesto = PS.postPresupuesto(newPedido.getPresupuesto());
                     if (presupuesto != null) {
                         newPedido.setPresupuesto(presupuesto); //asocio al pedido
                         PR.save(newPedido);

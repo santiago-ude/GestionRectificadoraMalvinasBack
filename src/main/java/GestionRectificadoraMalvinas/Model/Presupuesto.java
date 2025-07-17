@@ -30,7 +30,9 @@ public class Presupuesto {
     @Column(name = "total_presupuesto", nullable = false)
     private BigDecimal total;
 
-
+    private String autoAsignado;
+    private String numeroSerie;
+    private String pedidoANombreDe;
 
 
     //Constructor
@@ -83,5 +85,17 @@ public class Presupuesto {
                 "\n, items=" + items +
                 "\n, total=" + total +
                 '}';
+    }
+
+    public void setAutoAsignado(String autoAsignado) {
+        this.autoAsignado = autoAsignado;
+    }
+
+    public void setNumeroSerie(String numeroSerie) {
+        this.numeroSerie = numeroSerie;
+    }
+
+    public void setPedidoANombreDe(String pedidoANombreDe) {
+        this.pedidoANombreDe = pedidoANombreDe;
     }
 }
