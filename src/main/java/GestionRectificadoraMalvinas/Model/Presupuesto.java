@@ -75,18 +75,6 @@ public class Presupuesto {
     public void setTotal(BigDecimal total) {
         this.total = total;
     }
-
-    @Override
-    public String toString() {
-        return "Presupuesto{" +
-                "id=" + id +
-                "\n, fecha=" + fecha +
-                "\n, descuento=" + descuento +
-                "\n, items=" + items +
-                "\n, total=" + total +
-                '}';
-    }
-
     public void setAutoAsignado(String autoAsignado) {
         this.autoAsignado = autoAsignado;
     }
@@ -98,4 +86,32 @@ public class Presupuesto {
     public void setPedidoANombreDe(String pedidoANombreDe) {
         this.pedidoANombreDe = pedidoANombreDe;
     }
+
+    public String getAutoAsignado() {
+        return autoAsignado;
+    }
+
+    public String getNumeroSerie() {
+        return numeroSerie;
+    }
+
+    public String getPedidoANombreDe() {
+        return pedidoANombreDe;
+    }
+
+    @Override
+    public String toString() {
+        return "Presupuesto{" +
+                "id=" + id +
+                "\n, fecha=" + fecha +
+                "\n, descuento=" + descuento +
+                "\n, items=" + items +
+                "\n, total=" + total +
+                "\n, auto asignado a=" + autoAsignado +
+                "\n, nro: serie="+ numeroSerie +
+                "\n, nombre cliente=" + pedidoANombreDe +
+                '}';
+    }
+
+
 }
